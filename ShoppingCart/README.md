@@ -135,4 +135,4 @@ git add .
 git commit -m "Complete API testing and documentation"
 ```
 
-Do not commit `node_modules`. The `.gitignore` file already excludes it.
+Do not commit `node_modules`. The `.gitignore` file already excludes it..
