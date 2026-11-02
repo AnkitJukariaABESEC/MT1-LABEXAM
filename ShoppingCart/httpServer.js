@@ -8,7 +8,6 @@ const __dirname = path.dirname(__filename);
 
 const PORT = 3000;
 
-// In-memory cart array (no database is required).
 let cart = [
   { id: 1, productName: "Wireless Mouse", price: 799, quantity: 2 },
   { id: 2, productName: "Keyboard", price: 1200, quantity: 1 },
@@ -57,13 +56,12 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // GET /cart - Return all cart items
+
   if (req.method === "GET" && route === "/cart") {
     sendJSON(res, 200, cart);
     return;
   }
 
-  // GET /about - Application information
   if (req.method === "GET" && route === "/about") {
     sendHTML(res, 200, `
       <!DOCTYPE html>
@@ -78,7 +76,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // GET /home - Serve public/index.html using the FS module
   if (req.method === "GET" && route === "/home") {
     const filePath = path.join(__dirname, "public", "index.html");
 
@@ -93,7 +90,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // POST /add-to-cart - Add a product to the in-memory cart
   if (req.method === "POST" && route === "/add-to-cart") {
     let body = "";
     let bodyTooLarge = false;
@@ -156,7 +152,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // Any route/method not handled above
   sendJSON(res, 404, { message: "Route not found" });
 });
 
