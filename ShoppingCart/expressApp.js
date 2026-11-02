@@ -12,7 +12,7 @@ let cart = [
   { id: 2, productName: "Keyboard", price: 1200, quantity: 1, category: "Electronics" },
   { id: 3, productName: "Notebook", price: 80, quantity: 5, category: "Stationery" }
 ];
-
+// 
 function withTotalPrice(product) {
   return {
     ...product,
