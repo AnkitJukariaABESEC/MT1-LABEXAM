@@ -1,0 +1,13 @@
+{
+  "name": "shopping-cart-management",
+  "version": "1.0.0",
+  "description": "MT1 Full Stack Development lab exam - Shopping Cart using Node.js HTTP, FS and Express",
+  "type": "module",
+  "scripts": {
+    "start:http": "node httpServer.js",
+    "start:express": "node expressApp.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
